@@ -9,14 +9,16 @@ public class SedexEntrega implements TipoEntrega {
 
         double peso = pedido.getPesoTotal().getValor();
 
-        if (peso <= 0.5)
+        int gramas = (int) Math.round(peso * 1000);
+
+        if (gramas <= 500)
             return 12.50;
 
-        if (peso <= 1)
+        if (gramas <= 1000)
             return 20;
 
-        double excesso = peso - 1;
-        double adicionais = Math.ceil(excesso / 0.1);
+        int excesso = gramas - 1000;
+        int adicionais = (int) Math.ceil(excesso / 100.0);
 
         return 46.50 + adicionais * 1.50;
     }

@@ -10,7 +10,7 @@ import Entrega1.valueObjects.Dinheiro;
 import Entrega1.valueObjects.Peso;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -25,7 +25,21 @@ public class EntregaTest {
                 new Peso(0.8)
         );
 
-        Pedido pedido = new Pedido(List.of(produto));
+        Produto produto1 = new Produto(
+                "Livro",
+                new Dinheiro(50),
+                new Peso(0.8)
+        );
+
+        Produto produto2 = new Produto(
+                "Livro",
+                new Dinheiro(50),
+                new Peso(0.8)
+        );
+
+        List<Produto> produtos = new ArrayList();
+
+        Pedido pedido = new Pedido(produtos);
 
         TipoEntrega entrega = new PacEntrega();
 
@@ -39,17 +53,34 @@ public class EntregaTest {
 
         Produto produto = new Produto(
                 "Livro",
-                new Dinheiro(50),
-                new Peso(0.4)
+                new Dinheiro(200),
+                new Peso(0.5)
         );
 
-        Pedido pedido = new Pedido(List.of(produto));
+        Produto produto1 = new Produto(
+                "Livro",
+                new Dinheiro(50),
+                new Peso(0.5)
+        );
+
+        Produto produto2 = new Produto(
+                "Livro",
+                new Dinheiro(50),
+                new Peso(0.19)
+        );
+
+        List<Produto> produtos = new ArrayList();
+        produtos.add(produto);
+        produtos.add(produto1);
+        produtos.add(produto2);
+
+        Pedido pedido = new Pedido(produtos);
 
         TipoEntrega entrega = new SedexEntrega();
 
         double frete = entrega.calcularFrete(pedido);
 
-        assertEquals(12.50, frete);
+        assertEquals(49.5, frete);
     }
 
     @Test
