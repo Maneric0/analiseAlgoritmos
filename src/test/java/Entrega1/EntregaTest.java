@@ -28,16 +28,19 @@ public class EntregaTest {
         Produto produto1 = new Produto(
                 "Livro",
                 new Dinheiro(50),
-                new Peso(0.8)
+                new Peso(0.2)
         );
 
         Produto produto2 = new Produto(
                 "Livro",
                 new Dinheiro(50),
-                new Peso(0.8)
+                new Peso(0.1)
         );
 
         List<Produto> produtos = new ArrayList();
+        produtos.add(produto);
+        produtos.add(produto1);
+        produtos.add(produto2);
 
         Pedido pedido = new Pedido(produtos);
 
@@ -45,7 +48,7 @@ public class EntregaTest {
 
         double frete = entrega.calcularFrete(pedido);
 
-        assertEquals(10, frete);
+        assertEquals(15, frete);
     }
 
     @Test
