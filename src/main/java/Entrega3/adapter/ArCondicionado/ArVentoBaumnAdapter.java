@@ -1,7 +1,7 @@
 package Entrega3.adapter.ArCondicionado;
 
+import Entrega3.external.ArCondicionadoVentoBaumn;
 import Entrega3.domain.device.ArCondicionado;
-import br.furb.analise.algoritmos.ArCondicionadoVentoBaumn;
 
 public class ArVentoBaumnAdapter implements ArCondicionado {
 
@@ -49,7 +49,7 @@ public class ArVentoBaumnAdapter implements ArCondicionado {
     }
 
     @Override
-    public boolean isLigado() {
+    public boolean estaLigado() {
         return ligado;
     }
 }

@@ -1,7 +1,7 @@
 package Entrega3.adapter.Persiana;
 
+import Entrega3.external.PersianaSolarius;
 import Entrega3.domain.device.Persiana;
-import br.furb.analise.algoritmos.PersianaSolarius;
 
 public class PersianaSolariusAdapter implements Persiana {
 
@@ -25,7 +25,7 @@ public class PersianaSolariusAdapter implements Persiana {
     }
 
     @Override
-    public boolean isAberta() {
+    public boolean estaAberta() {
         return aberta;
     }
 }

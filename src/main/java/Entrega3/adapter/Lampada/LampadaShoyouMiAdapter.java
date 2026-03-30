@@ -1,7 +1,7 @@
 package Entrega3.adapter.Lampada;
 
+import Entrega3.external.LampadaShoyuMi;
 import Entrega3.domain.device.Lampada;
-import br.furb.analise.algoritmos.LampadaShoyuMi;
 
 public class LampadaShoyouMiAdapter implements Lampada {
 
@@ -25,7 +25,7 @@ public class LampadaShoyouMiAdapter implements Lampada {
     }
 
     @Override
-    public boolean isLigada() {
+    public boolean estaLigada() {
         return ligada;
     }
 }

@@ -1,7 +1,7 @@
 package Entrega3.adapter.Lampada;
 
+import Entrega3.external.LampadaPhellipes;
 import Entrega3.domain.device.Lampada;
-import br.furb.analise.algoritmos.LampadaPhellipes;
 
 public class LampadaPhelippesAdapter implements Lampada {
 
@@ -25,7 +25,7 @@ public class LampadaPhelippesAdapter implements Lampada {
     }
 
     @Override
-    public boolean isLigada() {
+    public boolean estaLigada() {
         return ligada;
     }
 }

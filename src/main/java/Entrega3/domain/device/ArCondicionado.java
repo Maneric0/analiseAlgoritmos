@@ -14,5 +14,5 @@ public interface ArCondicionado {
 
     int getTemperatura();
 
-    boolean isLigado();
+    boolean estaLigado();
 }

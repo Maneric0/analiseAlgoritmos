@@ -6,5 +6,5 @@ public interface Persiana {
 
     void fechar();
 
-    boolean isAberta();
+    boolean estaAberta();
 }

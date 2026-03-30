@@ -1,7 +1,7 @@
 package Entrega3.adapter.Persiana;
 
+import Entrega3.external.PersianaNatLight;
 import Entrega3.domain.device.Persiana;
-import br.furb.analise.algoritmos.PersianaNatLight;
 
 public class PersianaNatLightAdapter implements Persiana {
 
@@ -35,7 +35,7 @@ public class PersianaNatLightAdapter implements Persiana {
     }
 
     @Override
-    public boolean isAberta() {
+    public boolean estaAberta() {
         return aberta;
     }
 }

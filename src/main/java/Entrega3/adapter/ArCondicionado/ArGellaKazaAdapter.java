@@ -1,7 +1,7 @@
 package Entrega3.adapter.ArCondicionado;
 
+import Entrega3.external.ArCondicionadoGellaKaza;
 import Entrega3.domain.device.ArCondicionado;
-import br.furb.analise.algoritmos.ArCondicionadoGellaKaza;
 
 public class ArGellaKazaAdapter implements ArCondicionado {
 
@@ -53,7 +53,7 @@ public class ArGellaKazaAdapter implements ArCondicionado {
     }
 
     @Override
-    public boolean isLigado() {
+    public boolean estaLigado() {
         return ligado;
     }
 }

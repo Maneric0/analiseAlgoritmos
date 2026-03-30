@@ -32,14 +32,6 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>br.furb.analise.algoritmos</groupId>
-            <artifactId>LibDispositivosIot</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/LibDispositivosIot-1.0.jar</systemPath>
-        </dependency>
-
     </dependencies>
 
     <build>

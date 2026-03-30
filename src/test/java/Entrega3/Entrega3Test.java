@@ -4,10 +4,9 @@ import Entrega3.adapter.ArCondicionado.ArVentoBaumnAdapter;
 import Entrega3.adapter.Lampada.*;
 import Entrega3.adapter.Persiana.PersianaSolariusAdapter;
 import Entrega3.domain.device.*;
+import Entrega3.external.*;
 import Entrega3.facade.CasaInteligente;
-import br.furb.analise.algoritmos.*;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,7 +20,7 @@ public class Entrega3Test {
 
         lampada.ligar();
 
-        assertEquals(true, lampada.isLigada());
+        assertEquals(true, lampada.estaLigada());
     }
 
     @Test
@@ -33,7 +32,7 @@ public class Entrega3Test {
         lampada.ligar();
         lampada.desligar();
 
-        assertEquals(false, lampada.isLigada());
+        assertEquals(false, lampada.estaLigada());
     }
 
     @Test
@@ -63,8 +62,8 @@ public class Entrega3Test {
 
         casa.modoTrabalho();
 
-        assertEquals(true, lampada.isLigada());
-        assertEquals(true, ar.isLigado());
+        assertEquals(true, lampada.estaLigada());
+        assertEquals(true, ar.estaLigado());
         assertEquals(25, ar.getTemperatura());
     }
 
@@ -88,8 +87,8 @@ public class Entrega3Test {
 
         casa.modoSono();
 
-        assertEquals(false, lampada.isLigada());
-        assertEquals(false, ar.isLigado());
+        assertEquals(false, lampada.estaLigada());
+        assertEquals(false, ar.estaLigado());
     }
 
     @Test
@@ -99,10 +98,10 @@ public class Entrega3Test {
                 new ArVentoBaumnAdapter(new ArCondicionadoVentoBaumn());
 
         ar.ligar();
-        assertTrue(ar.isLigado());
+        assertTrue(ar.estaLigado());
 
         ar.desligar();
-        assertFalse(ar.isLigado());
+        assertFalse(ar.estaLigado());
     }
 
     @Test
@@ -130,10 +129,10 @@ public class Entrega3Test {
                 new PersianaSolariusAdapter(new PersianaSolarius());
 
         persiana.abrir();
-        assertTrue(persiana.isAberta());
+        assertTrue(persiana.estaAberta());
 
         persiana.fechar();
-        assertFalse(persiana.isAberta());
+        assertFalse(persiana.estaAberta());
     }
 
     @Test
@@ -154,8 +153,8 @@ public class Entrega3Test {
 
         casa.modoTrabalho();
 
-        assertTrue(lampada1.isLigada());
-        assertTrue(lampada2.isLigada());
-        assertTrue(ar1.isLigado());
+        assertTrue(lampada1.estaLigada());
+        assertTrue(lampada2.estaLigada());
+        assertTrue(ar1.estaLigado());
     }
 }

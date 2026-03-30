@@ -6,5 +6,5 @@ public interface Lampada {
 
     void desligar();
 
-    boolean isLigada();
+    boolean estaLigada();
 }
